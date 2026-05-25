@@ -1,5 +1,5 @@
-require 'dotenv'
-require 'fast_mcp'
+require "dotenv"
+require "fast_mcp"
 
 Dotenv.load
 
@@ -11,7 +11,7 @@ class Server
   end
 
   def server
-    @server ||= FastMcp::Server.new(name: 'test MCP server', version: '1.0.0')
+    @server ||= FastMcp::Server.new(name: "test MCP server", version: "1.0.0")
   end
 
   def start
@@ -20,13 +20,13 @@ class Server
 end
 
 class ExampleTool < FastMcp::Tool
-  description 'This is an example tool'
+  description "This is an example tool"
 
   arguments do
-    required(:required_string).filled(:string).description('Some required argument')
-    optional(:optional_integer).filled(:integer).description('Some optional arg')
+    required(:required_string).filled(:string).description("Some required argument")
+    optional(:optional_integer).filled(:integer).description("Some optional arg")
 
-    optional(:optional_hash).description('some optional hash').hash do
+    optional(:optional_hash).description("some optional hash").hash do
       optional(:key).filled(:string)
     end
   end
@@ -40,4 +40,4 @@ class ExampleTool < FastMcp::Tool
   end
 end
 
-Server.new(ExampleTool).start if ARGV.first == 'start'
+Server.new(ExampleTool).start if ARGV.first == "start"

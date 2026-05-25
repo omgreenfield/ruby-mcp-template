@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
-require 'bundler/setup'
+require "bundler/setup"
 Bundler.require(:development)
 
-require_relative '../src/mcp'
+require_relative "../src/mcp"
 
 Pry.start
