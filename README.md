@@ -5,7 +5,7 @@ Use [fast-mcp](https://github.com/yjacquin/fast-mcp) gem to easily spin up an MC
 ## Installation
 
 ```sh
-bin/install
+bin/setup
 ```
 
 ## Development
